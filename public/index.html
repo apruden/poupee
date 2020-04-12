@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="row">
+        <button id="back">back</button>
+        <button id="forward">forward</button>
+        <button id="enter">enter</button>
+        <button id="escape">esc</button>
+    </div>
+    <div class="row">
+        <form onsubmit="javascript:void(0);">
+            <input id="text" type="search" name="text">
+            <button id="type">ok</button>
+        </form>
+    </div>
+    <div class="splash">
+        <div class="try">
+            <div class="device">
+                <div class="device-button"></div>
+                <div class="device-screen-wrapper">
+                    <div class="device-screen">
+                        <div id="hitarea"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
