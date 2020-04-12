@@ -102,6 +102,24 @@ app.use(express.json())
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
+app.get('/api/v1/browser/app', (req, res) => {
+  let url = ''
+
+  switch(req.query.name) {
+    case 'youtube':
+      url = 'https://www.youtube.com';
+      break;
+    case 'disney':
+      url = 'https://www.disneyplus.com';
+      break;
+    case 'netflix':
+      url = 'https://www.netflix.com';
+      break;        
+  }
+
+  page.goto(url)
+})
+
 app.get('/api/v1/browser/mouse', async (req, res) => {
   if (req.query.click) {
     await page.mouse.down()
@@ -114,7 +132,7 @@ app.get('/api/v1/browser/mouse', async (req, res) => {
 
     await page.mouse.move(currX, currY)
   }
-  
+
   res.send('OK')
 })
 

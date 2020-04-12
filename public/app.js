@@ -180,3 +180,7 @@ $('#escape').click(() => {
 $('#type').click(() => {
     axios.get('/api/v1/browser/type', { params: { text: $('#text').val() }})
 });
+
+$('#go').click(() => {
+    axios.get('/api/v1/browser/app', { params: { name: $('#app').val() }})
+});
