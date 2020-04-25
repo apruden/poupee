@@ -109,7 +109,7 @@ app.get('/api/v1/browser/app', (req, res) => {
     case 'youtube':
       url = 'https://www.youtube.com';
       break;
-    case 'disney':
+    case 'disneyplus':
       url = 'https://www.disneyplus.com';
       break;
     case 'netflix':
@@ -174,6 +174,6 @@ app.post('/api/v1/page/events', async (req, res) => {
   res.send('OK')
 })
 
-app.use(express.static('public'))
+app.use(express.static('dist'))
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))

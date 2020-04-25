@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
+</head>
+
+<body>
+    <div id="poupee">
+        <div class="row">
+            <md-field>
+            <md-select v-model="provider" @change="go">
+                <md-option v-for="option in options" v-bind:value="option.value">
+                    {{ option.text }}
+                </md-option>
+            </md-select>
+            </md-field>
+        </div>
+        <div class="row">
+            <md-button @click="back" class="md-icon-button md-raised">
+                <md-icon>chevron_left</md-icon>
+            </md-button>
+            <md-button @click="forward" class="md-icon-button md-raised">
+                <md-icon>chevron_right</md-icon>
+            </md-button>
+            <md-button @click="enter" class="md-icon-button md-raised">
+                <md-icon>subdirectory_arrow_left</md-icon>
+            </md-button>
+            <md-button @click="escape" class="md-icon-button md-raised">
+                <md-icon>cancel</md-icon>
+            </md-button>
+        </div>
+        <div class="row">
+            <md-field>
+                <md-input id="text" type="search" v-model="text"></md-input>
+            </md-field>
+        </div>
+    </div>
+    <div class="splash">
+        <div class="try">
+            <div class="device">
+                <div class="device-button"></div>
+                <div class="device-screen-wrapper">
+                    <div class="device-screen">
+                        <div id="hitarea"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

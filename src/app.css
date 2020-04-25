@@ -42,11 +42,6 @@
     overflow: hidden;
   }
   
-  .splash .try .device.hammertime .device-screen {
-    background: url(../img/hammer.gif) no-repeat 50%;
-    background-size: cover;
-  }
-  
   .splash .try .device.hammertime .device-screen #hitarea {
     display: none;
   }
